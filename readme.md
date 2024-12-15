@@ -40,9 +40,6 @@ Este projeto implementa uma API REST para gerenciar pedidos de um sistema de e-c
 1. Clone o repositório: `git clone https://github.com/leovieir4/pedidos-ml`
 2. Navegue até o diretório do projeto: `cd pedidos-ml`
 
-## 🚀 Deploy na AWS:
-[Link da API](http://13.59.156.)
-
 ## Execução ▶️
 
 ### Localmente com Docker
@@ -51,6 +48,32 @@ Este projeto implementa uma API REST para gerenciar pedidos de um sistema de e-c
 2. Execute o container Docker: `docker run -p 8080:8080 pedidos-ml`
 3. A API estará disponível em: `http://localhost:8080` (ou em outra porta que você tenha configurado)
 4. A documentação da API estará disponível em: `http://localhost:8080/swagger-ui/index.html`
+
+## 🐳 Executar com Docker Compose:
+
+Para executar a aplicação via Docker Compose:
+
+1.  Clone o repositório do projeto.
+2.  Navegue até o diretório raiz do projeto no terminal.
+3.  Execute o comando `docker-compose up -d --build `. Isso construirá a imagem Docker, caso ainda não exista, e iniciará o contêiner em segundo plano.
+
+## 🔎 Visualizar os logs:
+
+Para visualizar os logs da aplicação em tempo real, execute o seguinte comando:
+
+```bash
+docker-compose logs -f api-tokens
+```
+
+## 🛑 Parar a aplicação (Docker):
+
+Para parar a aplicação e remover os contêineres, execute o seguinte comando:
+
+```bash
+docker-compose down
+```
+
+## 🔄 Reconstruir a imagem (Docker):
 
 ### Em um cluster Kubernetes
 
