@@ -139,6 +139,8 @@ A API utiliza Bearer Token JWT para autenticação. Você precisa obter o token 
 
 [Link para a documentação Swagger da API de Geração de Token](http://13.59.156.55:8081/swagger-ui/index.html)
 
+[Link para o GIT da API de Autenticação](https://github.com/leovieir4/authentication-ml)
+
 ## Modelo de Dados 📊
 
 O modelo de dados da aplicação é composto pelas seguintes entidades:
