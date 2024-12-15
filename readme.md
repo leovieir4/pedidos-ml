@@ -128,6 +128,10 @@ A pasta `k8s` contém os arquivos de configuração para deploy da aplicação e
 
 A API utiliza Bearer Token JWT para autenticação. Você precisa obter o token de uma API de autenticação externa e incluí-lo no header `Authorization` de cada requisição.
 
+## Local para adicionra o token gerado na API de autenticação
+
+![Adicionar token](https://i.ibb.co/s5ccV70/Captura-de-tela-2024-12-15-185854.png)
+
 **Swagger da API de Geração de Token:**
 
 [Link para a documentação Swagger da API de Geração de Token](http://13.59.156.55:8081/swagger-ui/index.html)
