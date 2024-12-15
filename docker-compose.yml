@@ -1,0 +1,10 @@
+services:
+  api-pedidos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        JAR_FILE: app.jar
+    ports:
+      - "8080:8080"
+    command: ["java", "-Dspring.profiles.active=not_local", "-jar", "app.jar"]

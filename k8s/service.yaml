@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pedidosml-service
+spec:
+  selector:
+    app: pedidosml
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer # Ou NodePort, ClusterIP
