@@ -137,7 +137,7 @@ A API utiliza Bearer Token JWT para autenticação. Você precisa obter o token 
 * username: usuariomercadolivre
 * password: senhamercadolivre
 
-[Link para a documentação Swagger da API de Geração de Token](http://13.59.156.55:8081/swagger-ui/index.html)
+[Link para a documentação Swagger da API de Autenticação](http://13.59.156.55:8081/swagger-ui/index.html)
 
 [Link para o GIT da API de Autenticação](https://github.com/leovieir4/authentication-ml)
 
