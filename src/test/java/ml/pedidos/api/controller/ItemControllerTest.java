@@ -81,7 +81,7 @@ public class ItemControllerTest {
 
         ResponseEntity<CentroDeDistribuicaoPorItemReponse> response = itemController.consultarCentrosDeDistribuicaoPorItem(itemId);
 
-        assertEquals(HttpStatus.FOUND, response.getStatusCode()); // Note que o status code está como FOUND (302), deve ser OK (200)
+        assertEquals(HttpStatus.OK, response.getStatusCode()); // Note que o status code está como FOUND (302), deve ser OK (200)
         verify(itemService, times(1)).buscarItemPorId(itemId);
     }
 

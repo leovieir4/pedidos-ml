@@ -80,7 +80,7 @@ public class ItemController extends ControllerValidadorDeRequests {
        try{
            ItemDTO itemDTO = itemService.buscarItemPorId(itemId);
            return new ResponseEntity<>(CentroDeDistribuicaoPorItemReponse.gerarCentrosDeDistribuicaoPorItem(itemDTO),
-                   HttpStatus.FOUND);
+                   HttpStatus.OK);
        } catch (ItemNaoEcontradoException ex) {
            return new ResponseEntity<>(CentroDeDistribuicaoPorItemReponse.builder()
                    .errorResponse(ErrorResponse.gerarError(ex.getMessage()))
