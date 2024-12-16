@@ -83,7 +83,7 @@ public class PedidoControllerTest {
 
         ResponseEntity<PedidoResponse> response = pedidoController.consultarPedido(id);
 
-        assertEquals(HttpStatus.CREATED, response.getStatusCode()); // Note que o status code está como CREATED, deve ser OK (200)
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertEquals(pedidoCriado, response.getBody().getPedidoDTO());
         verify(pedidoService, times(1)).buscarPedidoPorId(id);
     }

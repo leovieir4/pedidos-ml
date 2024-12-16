@@ -60,22 +60,18 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
             try {
                 Key key = Keys.hmacShaKeyFor(chaveAssinaturaToken.getSecret().getBytes(StandardCharsets.UTF_8));
 
-                // Valida o token e extrai as claims
                 Jws<Claims> jwsClaims = Jwts.parserBuilder()
                         .setSigningKey(key)
                         .build()
                         .parseClaimsJws(token.replace(securityConstants.getTokenPrefix(), ""));
 
-                // Extrai o username do token
                 String username = jwsClaims.getBody().getSubject();
 
                 if (username != null) {
-                    // Passa o username como principal
                     return new UsernamePasswordAuthenticationToken(username, null, new ArrayList<>());
                 }
 
             } catch (JwtException e) {
-                // Token inválido - logue o erro ou retorne uma resposta de erro
                 return null;
             }
         }
